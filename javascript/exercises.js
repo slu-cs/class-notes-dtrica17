@@ -15,11 +15,8 @@ while (result > 1000){
   let temp = result;
   result = result + n;
   n = temp;
-
-  if (result > 1000) {
-    console.log(result);
-  }
 }
+console.log(result);
 
 
 // 3. Print the number of integers from 1 through 100 that are divisible by 3 or 5 but not both

@@ -16,7 +16,7 @@ while (result < 1000){
   result = result + n;
   n = temp;
 }
-console.log(result);
+console.log(`The first Fibonacci number that is greater than 1000: ${result}`);
 
 
 // 3. Print the number of integers from 1 through 100 that are divisible by 3 or 5 but not both

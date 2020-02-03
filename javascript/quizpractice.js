@@ -53,7 +53,7 @@ Book.prototype.check =  function(author) {
 const moby = new Book('Moby Dick', ['Herman Melville']);
 
 // Method calls
-console.log(moby.check('James Dean'));
+console.log(moby.check('Herman Melville'));
 // Define a shared method for books that lets you check whether a given author was one of the authors in this book.
 
 

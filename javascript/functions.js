@@ -18,3 +18,34 @@ const result = print(7, 8);
 console.log(result);
 print(9); // b is Undefined
 print(); // a and b are Undefined
+
+// Object literal with a method
+const rectangle = {
+  width: 10;
+  height: 20;
+  area: function() {
+    return this.width * this.height;
+  }
+}
+
+// Method call
+console.log(rectangle.area());
+
+// Constructor definition
+const Rectangle = function(width, height) {
+  this.width = width;
+  this.height = height;
+};
+
+// Shared Method
+Rectangle.prototype.area =  function() {
+  return this.width * this.height;
+};
+
+// Constructing objects
+const small = new Rectangle(1, 2);
+const large = new Rectangle(10, 20);
+
+// Method calls
+console.log(small.area());
+console.log(large.area());

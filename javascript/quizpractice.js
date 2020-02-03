@@ -14,7 +14,7 @@ const Course = function(subject, number) {
 // Constructing all 4 courses
 const web = new Course('CS', 332);
 const mathstat = new Course('STAT', 326);
-const bridge = new Course('MATH', 280);
+const bridge = new Course('MATH', 480);
 const film =  new Course('FILM', 211);
 
 // Construct array
@@ -22,13 +22,14 @@ const courses = [web, mathstat, bridge, film];
 console.log(courses);
 
 // finding largest course number
+largest = 0;
 for (let i=0; i < courses.length; i++) {
-  largest = 0;
   if (courses[i].number > courses[largest].number) {
     largest = i;
   }
 }
 
+// print out largest course number
 console.log(courses[largest].number);
 
 // 2. Define a constructor function for Book objects.

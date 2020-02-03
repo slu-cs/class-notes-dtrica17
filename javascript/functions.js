@@ -26,7 +26,7 @@ const rectangle = {
   area: function() {
     return this.width * this.height;
   }
-}
+};
 
 // Method call
 console.log(rectangle.area());

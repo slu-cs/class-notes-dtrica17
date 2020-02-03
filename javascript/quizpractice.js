@@ -24,7 +24,7 @@ console.log(courses);
 // finding largest course number
 for (let i=0; i < courses.length; i++) {
   largest = 0;
-  if (courses[i].number > largest[i].number) {
+  if (courses[i].number > courses[largest].number) {
     largest = i;
   }
 }

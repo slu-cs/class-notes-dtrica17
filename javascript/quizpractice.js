@@ -17,10 +17,19 @@ const mathstat = new Course('STAT', 326);
 const bridge = new Course('MATH', 280);
 const film =  new Course('FILM', 211);
 
-// Array
+// Construct array
 const courses = [web, mathstat, bridge, film];
 console.log(courses);
 
+// finding largest course number
+for (let i=0; i < courses.length; i++) {
+  largest = 0;
+  if (courses[i].number > largest[i].number) {
+    largest = i;
+  }
+}
+
+console.log(courses[largest]);
 
 // 2. Define a constructor function for Book objects.
 // Each book should have a title and an array of authors.

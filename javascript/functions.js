@@ -21,8 +21,8 @@ print(); // a and b are Undefined
 
 // Object literal with a method
 const rectangle = {
-  width: 10;
-  height: 20;
+  width: 10,
+  height: 20,
   area: function() {
     return this.width * this.height;
   }
@@ -37,7 +37,7 @@ const Rectangle = function(width, height) {
   this.height = height;
 };
 
-// Shared Method
+// Shared Method definition
 Rectangle.prototype.area =  function() {
   return this.width * this.height;
 };

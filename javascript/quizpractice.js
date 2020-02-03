@@ -14,7 +14,7 @@ const Course = function(subject, number) {
 // Constructing all 4 courses
 const web = new Course('CS', 332);
 const mathstat = new Course('STAT', 326);
-const bridge = new Course('MATH', 480);
+const bridge = new Course('MATH', 280);
 const film =  new Course('FILM', 211);
 
 // Construct array

@@ -29,7 +29,7 @@ for (let i=0; i < courses.length; i++) {
   }
 }
 
-console.log(courses[largest]);
+console.log(courses[largest].number);
 
 // 2. Define a constructor function for Book objects.
 // Each book should have a title and an array of authors.

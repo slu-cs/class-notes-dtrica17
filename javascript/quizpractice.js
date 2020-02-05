@@ -55,7 +55,7 @@ console.log(moby.check('Herman Melville')); // should be true
 let result = '[';
 const range = function(a, b) {
   while (a < b) {
-    result = result + a;
+    result = result + a + ', ';
     a++;
   }
   result = result + ']';
@@ -65,4 +65,4 @@ const range = function(a, b) {
 
 
 // For example, range(5) returns [0,1,2,3,4] and range(3,8) returns [3,4,5,6,7]
-console.log(range(3, 8)); // should be true
+range(3, 8);

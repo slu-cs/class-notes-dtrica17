@@ -19,7 +19,7 @@ const courses = [web, mathstat, bridge, film];
 console.log(courses);
 
 // Iterate through this array to find the largest course number in your schedule.
-largest = 0;
+let largest = 0;
 for (let i=0; i < courses.length; i++) {
   if (courses[i].number > courses[largest].number) {
     largest = i;
@@ -28,6 +28,19 @@ for (let i=0; i < courses.length; i++) {
 
 // print out largest course number
 console.log(courses[largest].number);
+
+// Alternate method through function
+let biggest = 0;
+const large = function(array){
+  for (let i=0; i < array.length; i++) {
+    if (array[i].number > biggest){
+      biggest = array[i].number;
+    }
+  }
+  return biggest;
+};
+
+console.log(large(courses));
 
 // 2.
 // Define a constructor function for Book objects. Each book should have a title and an array of authors.
@@ -38,16 +51,12 @@ const Book = function(title, authors){
 
 // Define a shared method for books that lets you check whether a given author was one of the authors in this book.
 Book.prototype.check =  function(author) {
-  if (author in this.authors){
-    return true;
-  }
-  else{
-    return false;
-  }
+  return this.authors.includes(author);
 };
 
 // Construct a book
 const moby = new Book('Moby Dick', ['Herman Melville']);
+console.log(moby);
 
 // Test method
 console.log(moby.check('Herman Melville')); // should be true
@@ -55,9 +64,24 @@ console.log(moby.check('Herman Melville')); // should be true
 
 
 // 3.
-// Define a function that works like the range function in Python.
+// Define a function that works like the range function in Python
+let result = '[';
+const range = function(a, b) {
+  if (typeof b === 'undefined' || b === null){
+    let count = 0;
+    while(count < a){
+      result = result + count + ', ';
+      count++;
+    }
+  } else {
+    while (a < b) {
+        result = result + a + ', ';
+        a++;
+    }
+  }
+  result = result.substring(0, result.length - 2) + ']';
+  console.log(result);
+}
 
-
-
-
-// For example, range(5) returns [0,1,2,3,4] and range(3,8) returns [3,4,5,6,7].
+range(3, 8); // expect [3,4,5,6,7]
+range(5); // expect [0,1,2,3,4]

@@ -20,7 +20,16 @@ console.log(`The first Fibonacci number that is greater than 1000: ${result}`);
 
 
 // 3. Print the number of integers from 1 through 100 that are divisible by 3 or 5 but not both
-
+let count = 0;
+for (let x = 0; x < 101; x++){
+  if ((x % 3 === 0) & (x % 5 !== 0)){
+    count ++;
+  }
+  if ((x % 5 === 0) & (x % 3 !== 0)){
+    count ++;
+  }
+}
+console.log(count);
 
 
 // 4. Print the smallest integer that is divisible by all the integers from 1 through 10

@@ -26,7 +26,11 @@ for (let i=0; i < courses.length; i++) {
   }
 }
 
-let biggest = 0
+// print out largest course number
+console.log(courses[largest].number);
+
+// Alternate method through function
+let biggest = 0;
 const large = function(array){
   for (let i=0; i < array.length; i++) {
     if (array[i].number > biggest){
@@ -36,8 +40,6 @@ const large = function(array){
   return biggest;
 };
 
-// print out largest course number
-console.log(courses[largest].number);
 console.log(large(courses));
 
 // 2.

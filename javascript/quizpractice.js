@@ -19,15 +19,26 @@ const courses = [web, mathstat, bridge, film];
 console.log(courses);
 
 // Iterate through this array to find the largest course number in your schedule.
-largest = 0;
+let largest = 0;
 for (let i=0; i < courses.length; i++) {
   if (courses[i].number > courses[largest].number) {
     largest = i;
   }
 }
 
+let biggest = 0
+const large = function(array){
+  for (let i=0; i < array.length; i++) {
+    if (array[i] > biggest){
+      biggest = array[i];
+    }
+  }
+  return biggest;
+};
+
 // print out largest course number
 console.log(courses[largest].number);
+console.log(large(courses));
 
 // 2.
 // Define a constructor function for Book objects. Each book should have a title and an array of authors.

@@ -29,8 +29,8 @@ for (let i=0; i < courses.length; i++) {
 let biggest = 0
 const large = function(array){
   for (let i=0; i < array.length; i++) {
-    if (array[i] > biggest){
-      biggest = array[i];
+    if (array[i].number > biggest){
+      biggest = array[i].number;
     }
   }
   return biggest;

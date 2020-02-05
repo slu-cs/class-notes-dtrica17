@@ -58,7 +58,8 @@ const range = function(a, b) {
     result = result + a + ', ';
     a++;
   }
-  result = (result - ', ')+ ']';
+  result = result - ', ';
+  result = result + ']';
   console.log(result);
 }
 

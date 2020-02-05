@@ -54,15 +54,22 @@ console.log(moby.check('Herman Melville')); // should be true
 // Define a function that works like the range function in Python
 let result = '[';
 const range = function(a, b) {
-  while (a < b) {
-    result = result + a + ', ';
-    a++;
+  if(b < 1){
+    while (a < b) {
+      result = result + a + ', ';
+      a++;
+    }
+  }
+  else{
+    let count = 0;
+    while(count < a){
+      result = result + count + ', ';
+      count++;
+    }
   }
   result = result.substring(0, result.length - 2) + ']';
   console.log(result);
 }
 
-
-
-// For example, range(5) returns [0,1,2,3,4] and range(3,8) returns [3,4,5,6,7]
-range(3, 8);
+range(3, 8); // expect [3,4,5,6,7]
+range(5); // expect [0,1,2,3,4]

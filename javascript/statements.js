@@ -19,7 +19,7 @@ while (x < 3){
 }
 
 // Conditional
-if (x === 2) {
+if (x === 3) {
   console.log('x is now 3');
 } else {
   console.log(`x is now ${x}`);

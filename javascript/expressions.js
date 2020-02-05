@@ -53,5 +53,5 @@ false == ''
 '' == 0
 
 // Template strings
-'3+2 is ' + (3+2)
-`3+2 is ${3+2}` // equal to above
+console.log('3+2 is ' + (3+2));
+console.log(`3+2 is ${3+2}`);   // equal to above

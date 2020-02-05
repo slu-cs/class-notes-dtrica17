@@ -48,6 +48,7 @@ Book.prototype.check =  function(author) {
 
 // Construct a book
 const moby = new Book('Moby Dick', ['Herman Melville']);
+console.log(moby);
 
 // Test method
 console.log(moby.check('Herman Melville')); // should be true

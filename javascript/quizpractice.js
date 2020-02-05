@@ -38,11 +38,7 @@ const Book = function(title, authors){
 
 // Define a shared method for books that lets you check whether a given author was one of the authors in this book.
 Book.prototype.check =  function(author) {
-  if (author in this.authors){
-    return true;
-  }
-  else{
-    return false;
+    return this.authors.includes(author);
   }
 };
 

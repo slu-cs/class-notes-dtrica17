@@ -58,8 +58,7 @@ const range = function(a, b) {
     result = result + a + ', ';
     a++;
   }
-  result = result.substring(0, result.length - 2);
-  result = result + ']';
+  result = result.substring(0, result.length - 2) + ']';
   console.log(result);
 }
 

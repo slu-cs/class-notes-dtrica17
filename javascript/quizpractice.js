@@ -54,7 +54,7 @@ console.log(moby.check('Herman Melville')); // should be true
 // Define a function that works like the range function in Python
 let result = '[';
 const range = function(a, b) {
-  if (typeof b == null){
+  if (b == null){
     let count = 0;
     while(count < a){
       result = result + count + ', ';

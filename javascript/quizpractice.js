@@ -55,17 +55,18 @@ console.log(moby.check('Herman Melville')); // should be true
 let result = '[';
 const range = function(a, b) {
   if (typeof b == 'undefined'){
-    while (a < b) {
-      result = result + a + ', ';
-      a++;
-    }
-  } else {
     let count = 0;
     while(count < a){
       result = result + count + ', ';
       count++;
     }
+  } else {
+    while (a < b) {
+        result = result + a + ', ';
+        a++;
+    }
   }
+}
   result = result.substring(0, result.length - 2) + ']';
   console.log(result);
 }

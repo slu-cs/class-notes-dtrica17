@@ -39,8 +39,7 @@ const Book = function(title, authors){
 // Define a shared method for books that lets you check whether a given author was one of the authors in this book.
 Book.prototype.check =  function(author) {
   return this.authors.includes(author);
-  }
-}
+};
 
 // Construct a book
 const moby = new Book('Moby Dick', ['Herman Melville']);

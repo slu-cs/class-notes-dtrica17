@@ -66,7 +66,6 @@ const range = function(a, b) {
         a++;
     }
   }
-}
   result = result.substring(0, result.length - 2) + ']';
   console.log(result);
 }

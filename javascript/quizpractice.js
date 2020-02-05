@@ -51,9 +51,18 @@ console.log(moby.check('Herman Melville')); // should be true
 
 
 // 3.
-// Define a function that works like the range function in Python.
+// Define a function that works like the range function in Python
+let result = '[';
+const range = function(a, b) {
+  while (a < b) {
+    result = result + a;
+    a++;
+  }
+  result = result + ']';
+  console.log(result);
+}
 
 
 
-
-// For example, range(5) returns [0,1,2,3,4] and range(3,8) returns [3,4,5,6,7].
+// For example, range(5) returns [0,1,2,3,4] and range(3,8) returns [3,4,5,6,7]
+console.log(range(3, 8)); // should be true

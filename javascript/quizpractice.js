@@ -19,7 +19,7 @@ const courses = [web, mathstat, bridge, film];
 console.log(courses);
 
 // Iterate through this array to find the largest course number in your schedule.
-largest = 0;
+let largest = 0;
 for (let i=0; i < courses.length; i++) {
   if (courses[i].number > courses[largest].number) {
     largest = i;
@@ -28,6 +28,19 @@ for (let i=0; i < courses.length; i++) {
 
 // print out largest course number
 console.log(courses[largest].number);
+
+// Alternate method through function
+let biggest = 0;
+const large = function(array){
+  for (let i=0; i < array.length; i++) {
+    if (array[i].number > biggest){
+      biggest = array[i].number;
+    }
+  }
+  return biggest;
+};
+
+console.log(large(courses));
 
 // 2.
 // Define a constructor function for Book objects. Each book should have a title and an array of authors.
@@ -54,7 +67,7 @@ console.log(moby.check('Herman Melville')); // should be true
 // Define a function that works like the range function in Python
 let result = '[';
 const range = function(a, b) {
-  if (typeof b === 'undefined'){
+  if (typeof b === 'undefined' || b === null){
     let count = 0;
     while(count < a){
       result = result + count + ', ';

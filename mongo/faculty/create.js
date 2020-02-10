@@ -22,37 +22,30 @@ const torrey = new Professor({
 });
 
 const lee = new Professor({
-  name: 'Chong-Soo Lee',
+  name: 'Choong-Soo Lee',
   rank: 'Associate',
   started: 2010,
   courses: [140, 219, 256, 321, 370]
 });
 
-// Delete any previous database
-mongoose.connection.dropDatabase(function(){
+// Delete any previous data
+mongoose.connection.dropDatabase(function() {
 
   // Save the new data
   harcourt.save(function(error) {
     if (error) console.error(error.stack);
 
-    torrey.save(function(error){
+    torrey.save(function(error) {
       if (error) console.error(error.stack);
 
-      lee.save(function(error){
+      lee.save(function(error) {
         if (error) console.error(error.stack);
 
         // Disconnect
-        mongoose.connection.close(function(){
-          console.log('Database is ready.')
-        })
+        mongoose.connection.close(function() {
+          console.log('Database is ready.');
+        });
       });
     });
   });
-});
-
-  lee.save();
-
-  // Disconnect
-  mongoose.connection.close();
-
 });

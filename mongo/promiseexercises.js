@@ -7,8 +7,8 @@ f('hello', function(error, result) {
 
 // Promise code
 f('hello')
-.then(result => console.log(result))
-.catch(error => console.error(error.stack));
+  .then(result => console.log(result))
+  .catch(error => console.error(error.stack));
 
 
 // 2.

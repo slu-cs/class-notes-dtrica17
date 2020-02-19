@@ -1,5 +1,4 @@
-// Callback class examples
-
+// 1.
 
 // built-in filter function
 const numbers = [1, 2, 3, 4, 5];
@@ -18,3 +17,8 @@ const filter = function(array, transform) {
 
 const odds2 = filter(numbers, x => x%2 > 0);
 console.log(odds2);
+
+
+// 2.
+const numbers = [4, 2, 5, 1, 3];
+numbers.sort((a,b) => a - b);

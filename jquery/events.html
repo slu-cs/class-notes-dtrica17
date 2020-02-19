@@ -21,11 +21,25 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> </script>
     <script>
-      console.log($(document));
-      console.log($('form'));
-      console.log($('button'));
-      console.log($('#A'));
-      console.log($('.second'));
+
+      $('form').on('submit', function(event) {
+        const form = $(this);
+        event.preventDefault();
+        console.log('Form data: ', form.serialize());
+      });
+
+      $(document).on('click', 'img', function(event){
+        const img = $(this);
+        const id = img.attr('id');
+        console.log('Clicked image', id);
+      });
+
+      $('.second').on('click', 'button', function(event){
+        const button = $(this);
+        const id = button.attr('id');
+        console.log('Clicked button', id);
+      });
+
     </script> <!-- -->
   </body>
-</html> 
+</html>

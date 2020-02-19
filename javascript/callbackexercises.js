@@ -9,7 +9,7 @@ console.log(odds);
 const filter = function(array, transform) {
   const copy = [];
   for (const element of array) {
-    if (element % 2 > 0)
+    if (transform(element))
     copy.push(element);
   }
   return copy;
@@ -48,7 +48,7 @@ file.on('line', function(line) {
 });
 
 
-// Then use the sort method (with a new arrow function) to sort disciplines by popularity. 
+// Then use the sort method (with a new arrow function) to sort disciplines by popularity.
 // Let the popularity score for a discipline be the number of majors it has plus half the number of minors.
 file.on('close', function() {
   rows.sort((a,b) => (a.majors + a.minors/2) - (b.majors + b.minors/2));

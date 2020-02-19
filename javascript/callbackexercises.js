@@ -23,3 +23,6 @@ console.log(odds2);
 const numbers2 = [4, 2, 5, 1, 3];
 numbers2.sort((a,b) => a - b);
 console.log(numbers2);
+
+numbers2.sort((a,b) => b - a);
+console.log(numbers2);

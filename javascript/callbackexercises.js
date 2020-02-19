@@ -11,7 +11,7 @@ const filter = function(array, transform) {
   const copy = [];
   for (const element of array) {
     if (element % 2 > 0)
-    copy.push(transform(element));
+    copy.push(element);
   }
   return copy;
 }

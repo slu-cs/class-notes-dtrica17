@@ -36,6 +36,8 @@ file.on('line', function(line) {
   });
 });
 
+console.log(rows);
+
 // Let the popularity score for a discipline be the number of majors it has plus half the number of minors.
 // Sort disciplines by (increasing) popularity.
 file.on('close', function() {

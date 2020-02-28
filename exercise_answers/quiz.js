@@ -9,7 +9,7 @@ const labs = [
 ];
 
 // A. Generate a new array containing the seat numbers of all the labs (by invoking the built-in map method).
-const newt = labs.map(p -> p.seats);
+const newt = labs.map(p => p.seats);
 console.log(newt);
 
 // B. Generate a new array containing only the labs with more than 10 seats (by invoking the built-in filter method).

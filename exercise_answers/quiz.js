@@ -50,9 +50,9 @@ const user = readline.createInterface({
 });
 
 // A. Make small talk, using traditional callbacks.
-user.question('What is your name? ', response => 'Hello' + response + '.'); // response = 'Alice'
-
+//user.question('What is your name? ', response => 'Hello' + response + '.'); // response = 'Alice'
 //user.question('How are you doing? ', response => 'I am also' + response + '.'); // response = 'fine'
+
 //user.question('What is your name? ', response => 'Hello' + response + '.'); // response = 'Bob'
 //user.question('How are you doing? ', response => 'I am also' + response + '.'); // response = 'ok'
 
@@ -64,6 +64,9 @@ const question = function(prompt) {
 };
 
 // B. Make small talk again, using promises.
+question('What is your name? ')
+  .then(result => console.log(result))
+  .catch(error => console.error(error.stack));
 
 
 //////////////////////////////////////////////////////////////// Question 4

@@ -13,7 +13,7 @@ const newt = labs.map(p => p.seats);
 console.log(newt);
 
 // B. Generate a new array containing only the labs with more than 10 seats (by invoking the built-in filter method).
-
+const mew = labs.filter(lab => lab.seats > 10);
 
 // C. Sort the existing array in order of (increasing) seat numbers (by invoking the built-in sort method).
 

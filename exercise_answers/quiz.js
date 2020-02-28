@@ -17,6 +17,8 @@ const mew = labs.filter(lab => lab.seats > 10);
 console.log(mew);
 
 // C. Sort the existing array in order of (increasing) seat numbers (by invoking the built-in sort method).
+labs.sort((a, b) => a.seats - b.seats);
+console.log(labs);
 
 
 //////////////////////////////////////////////////////////////// Question 2

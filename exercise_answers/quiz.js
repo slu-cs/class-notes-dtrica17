@@ -36,7 +36,7 @@ const filter = function(array, test) {
     }
   }
 };
-console.log(function(numbers, element => element % 2 === 0));
+console.log(function(numbers, element % 2 === 0));
 
 
 //////////////////////////////////////////////////////////////// Question 3

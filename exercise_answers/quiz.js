@@ -67,9 +67,9 @@ const question = function(prompt) {
 question('What is your name? ')
   .then(result => console.log('Hello ' + result + '.'))
   .then(question('How are you doing? '))
-  .then(result => console.log('I am also ' + result + '.'))
-  .catch(error => console.error(error.stack));
-
+    .then(result => console.log('I am also ' + result + '.'))
+    .catch(error => console.error(error.stack));
+/*
 question('What is your name? ')
   .then(result => console.log('Hello ' + result + '.'))
   .catch(error => console.error(error.stack));

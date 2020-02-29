@@ -99,5 +99,4 @@ Promise.all([f1(), f2()])
   .then(function(results) {
     console.log('f1: ', results[0]);
     console.log('f1: ', results[1]);
-    mongoose.connection.close();
   }).catch(error => console.error(error.stack));

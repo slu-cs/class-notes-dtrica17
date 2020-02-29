@@ -68,7 +68,7 @@ question('What is your name? ')
   .then(result => console.log('Hello ' + result + '.'))
   .then(question('How are you doing? ')
     .then(result => console.log('I am also ' + result + '.'))
-  ).catch(error => console.error(error.stack));
+  )//.catch(error => console.error(error.stack));
 
 /*
 question('What is your name? ')

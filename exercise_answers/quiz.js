@@ -40,7 +40,7 @@ console.log(find(numbers, element => element % 2 === 0));
 
 
 //////////////////////////////////////////////////////////////// Question 3
-/*
+
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
 const readline = require('readline');
@@ -50,13 +50,13 @@ const user = readline.createInterface({
 });
 
 // A. Make small talk, using traditional callbacks.
-user.question('What is your name? ', response => console.log('Hello ' + response + '.')); // response = 'Alice'
-user.question('How are you doing? ', response => console.log('I am also' + response + '.')); // response = 'fine'
+//user.question('What is your name? ', response => console.log('Hello ' + response + '.')); // response = 'Alice'
+//user.question('How are you doing? ', response => console.log('I am also' + response + '.')); // response = 'fine'
 
 //user.question('What is your name? ', response => 'Hello' + response + '.'); // response = 'Bob'
 //user.question('How are you doing? ', response => 'I am also' + response + '.'); // response = 'ok'
 
-*/
+
 // The user.question method doesn't actually return a promise, so here is a question function that does.
 // Call this question function in part B instead of calling the user.question method.
 const question = function(prompt) {

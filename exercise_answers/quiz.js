@@ -40,7 +40,7 @@ console.log(find(numbers, element => element % 2 === 0));
 
 
 //////////////////////////////////////////////////////////////// Question 3
-
+/*
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
 const readline = require('readline');
@@ -83,7 +83,7 @@ question('How are you doing? ')
 //////////////////////////////////////////////////////////////// Question 4
 // Question 4 is commented out because otherwise it would interfere with Question 3.
 // When you're ready to work on Question 4, uncomment it and comment out Question 3.
-/*
+*/
 // This function returns a promise, which produces 42 after an asynchronous delay of one second.
 const f1 = function() {
   return new Promise(resolve => setTimeout(() => resolve(42), 1000));
@@ -95,6 +95,11 @@ const f2 = function() {
 };
 
 // Run f1 and f2 in parallel and log 'f1', 'f2', or 'equal' to indicate which function returned the larger result.
-
+Promise.all([f1(), f2()])
+  .then(function(results) {
+    console.log('f1: ', results[0]);
+    console.log('f1: ', results[1]);
+    mongoose.connection.close();
+  }).catch(error => console.error(error.stack));
 
 */

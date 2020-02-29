@@ -68,16 +68,18 @@ question('What is your name? ')
   .then(result => console.log('Hello ' + result + '.'))
   .then(() => question('How are you doing? ')
     .then(result => console.log('I am also ' + result + '.'))
+  )
+  .then(() => question('What is your name? ')
+    .then(result => console.log('Hello ' + result + '.'))
+  )
+  .then(() => question('How are you doing? ')
+    .then(result => console.log('I am also ' + result + '.'))
   ).catch(error => console.error(error.stack));
 
 /*
-question('What is your name? ')
-  .then(result => console.log('Hello ' + result + '.'))
-  .catch(error => console.error(error.stack));
 
-question('How are you doing? ')
-  .then(result => console.log('I am also ' + result + '.'))
-  .catch(error => console.error(error.stack));
+
+
 
 //////////////////////////////////////////////////////////////// Question 4
 // Question 4 is commented out because otherwise it would interfere with Question 3.

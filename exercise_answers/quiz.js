@@ -29,12 +29,13 @@ const numbers = [5, 4, 3, 2, 1];
 console.log(numbers.find(element => element % 2 === 0));
 
 // B. Define a standalone find function. The array is its first argument and the callback is its second argument.
-const find = function(array, test) {
+const find = function(array, condition) {
   for (const element of array) {
-    if (test(element)) {
+    if (condition(element)) {
       return element;
     }
   }
+  return undefined;
 };
 console.log(find(numbers, element => element % 2 === 0));
 

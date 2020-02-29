@@ -50,7 +50,7 @@ const user = readline.createInterface({
 });
 
 // A. Make small talk, using traditional callbacks.
-user.question('What is your name? ', console.log('Hello' + result + '.')); // response = 'Alice'
+user.question('What is your name? ', console.log('Hello' + response + '.')); // response = 'Alice'
 console.log(result);
 //user.question('How are you doing? ', response => 'I am also' + response + '.'); // response = 'fine'
 

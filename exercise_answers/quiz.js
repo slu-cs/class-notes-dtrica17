@@ -40,7 +40,7 @@ console.log(find(numbers, element => element % 2 === 0));
 
 
 //////////////////////////////////////////////////////////////// Question 3
-
+/*
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
 const readline = require('readline');
@@ -62,7 +62,7 @@ user.question('How are you doing? ', response => console.log('I am also' + respo
 const question = function(prompt) {
   return new Promise(resolve => user.question(prompt, resolve));
 };
-
+*/
 // B. Make small talk again, using promises.
 question('What is your name? ')
   .then(result => console.log('Hello ' + result + '.'))

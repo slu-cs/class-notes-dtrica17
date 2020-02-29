@@ -86,7 +86,7 @@ question('How are you doing? ')
 */
 // This function returns a promise, which produces 42 after an asynchronous delay of one second.
 const f1 = function() {
-  return new Promise(resolve => setTimeout(() => resolve(42), 1000));
+  return new Promise(resolve => setTimeout(() => resolve(24), 1000));
 };
 
 // This function returns a promise, which produces 24 after an asynchronous delay of one second.

@@ -97,5 +97,13 @@ const f2 = function() {
 // Run f1 and f2 in parallel and log 'f1', 'f2', or 'equal' to indicate which function returned the larger result.
 Promise.all([f1(), f2()])
   .then(function(results) {
-    console.log('f1: ', Math.max(results[0]));
+    if(results[0] == results[1]){
+      console.log('equal');
+    }
+    if(results[0] > results[1]){
+      console.log('f1');
+    }
+    else{
+      console.log('f2');
+    }
   }).catch(error => console.error(error.stack));

@@ -9,12 +9,12 @@ const labs = [
 ];
 
 // A. Generate a new array containing the seat numbers of all the labs (by invoking the built-in map method).
-const newt = labs.map(p => p.seats);
-console.log(newt);
+const seats = labs.map(p => p.seats);
+console.log(seats);
 
 // B. Generate a new array containing only the labs with more than 10 seats (by invoking the built-in filter method).
-const mew = labs.filter(lab => lab.seats > 10);
-console.log(mew);
+const geq_ten = labs.filter(lab => lab.seats > 10);
+console.log(geq_ten);
 
 // C. Sort the existing array in order of (increasing) seat numbers (by invoking the built-in sort method).
 labs.sort((a, b) => a.seats - b.seats);
@@ -51,9 +51,15 @@ const user = readline.createInterface({
 });
 
 // A. Make small talk, using traditional callbacks.
-user.question('What is your name? ', response => console.log('Hello ' + response + '.')); // response = 'Alice'
-user.question('How are you doing? ', response => console.log('I am also' + response + '.')); // response = 'fine'
+//user.question('What is your name? ', response => console.log('Hello ' + response + '.')); // response = 'Alice'
+//user.question('How are you doing? ', response => console.log('I am also' + response + '.')); // response = 'fine'
 
+user.question('What is your name? ', function(response){
+  console.log('Hello ' + response + '.');
+  user.question('How are you doing? ', function(response){
+    console.log('I am also' + response + '.');
+  });
+});
 //user.question('What is your name? ', response => 'Hello' + response + '.'); // response = 'Bob'
 //user.question('How are you doing? ', response => 'I am also' + response + '.'); // response = 'ok'
 

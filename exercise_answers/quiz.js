@@ -57,7 +57,13 @@ const user = readline.createInterface({
 user.question('What is your name? ', function(response){
   console.log('Hello ' + response + '.');
   user.question('How are you doing? ', function(response){
-    console.log('I am also' + response + '.');
+    console.log('I am also ' + response + '.');
+    user.question('What is your name? ', function(response){
+      console.log('Hello ' + response + '.');
+      user.question('How are you doing? ', function(response){
+        console.log('I am also ' + response + '.');
+      });
+    });
   });
 });
 //user.question('What is your name? ', response => 'Hello' + response + '.'); // response = 'Bob'

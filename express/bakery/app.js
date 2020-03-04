@@ -4,6 +4,11 @@ const express = require('express');
 // Create the server
 const app = express();
 
+// Ignore icon requests
+app.get('/favicon.ico', function(request, response) {
+  response.status(204).end();
+});
+
 // http://cs-linuxlab-05.stlawu.edu:3000/
 app.use(function(request, response, next) {
   console.log('-----', new Date().toLocaleTimeString());
@@ -12,7 +17,7 @@ app.use(function(request, response, next) {
   next(); // Keep handling this request
 });
 
-// Home page
+// Home page (cs-linux-lab-05.stlawu.edu:3000/)
 app.get('/', function(request, response) {
   // back ticks can be used to show multi-line strings as you can see below
   response.send(`
@@ -23,6 +28,10 @@ app.get('/', function(request, response) {
       </ul>
     `);
 });
+
+// Routing
+app.use('/cakes', require('./cakes.js'));
+app.use('/pies', require('./pies.js'));
 
 // Handle undefined routes
 app.use(function(request, response, next) {

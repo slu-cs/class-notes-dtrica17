@@ -1,32 +1,29 @@
-// Hello world web sever
+// Bakery web server
 const express = require('express');
 
 // Create the server
 const app = express();
+
+// Use a view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 // Ignore icon requests
 app.get('/favicon.ico', function(request, response) {
   response.status(204).end();
 });
 
-// http://cs-linuxlab-05.stlawu.edu:3000/
+// Log requests to the console
 app.use(function(request, response, next) {
-  console.log('-----', new Date().toLocaleTimeString());
+  console.log('---------------------', new Date().toLocaleTimeString());
   console.log(request.method, request.url);
-  console.log('Body = ', request.body);
+  console.log('Body =', request.body);
   next(); // Keep handling this request
 });
 
-// Home page (cs-linux-lab-05.stlawu.edu:3000/)
+// cs-linuxlab-##.stlawu.edu:3000/
 app.get('/', function(request, response) {
-  // back ticks can be used to show multi-line strings as you can see below
-  response.send(`
-      <h1>Bakery</h1>
-      <ul>
-        <li><a href="/cakes">Cakes</a></li>
-        <li><a href="/pies">Pies</a></li>
-      </ul>
-    `);
+  response.render('index');
 });
 
 // Routing
@@ -45,7 +42,6 @@ app.use(function(error, request, response, next) {
   response.status(500).send(error.message);
 });
 
-
-// Start the Server
+// Start the server
 app.listen(3000);
-console.log('Server is ready');
+console.log('Server is ready.');
